@@ -1,7 +1,7 @@
-package grid;
+package model.grid;
 
-import element.MovableElement;
-import util.Coordinate;
+import model.element.MovableElement;
+import model.util.Coordinate;
 
 import java.util.HashMap;
 

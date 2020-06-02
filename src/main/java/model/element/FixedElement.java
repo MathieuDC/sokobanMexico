@@ -1,4 +1,4 @@
-package element;
+package model.element;
 
 public enum FixedElement implements Element {
     WALL("W"),

@@ -1,12 +1,13 @@
-package grid;
+package model.grid;
 
-import element.MovableElement;
-import util.Coordinate;
-import util.Direction;
+import model.element.MovableElement;
+import model.util.Coordinate;
+import model.util.Direction;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class GridMovableElement implements Grid {
+public class GridMovableElement implements Grid, Serializable {
 
     private HashMap<Coordinate, MovableElement> elements;
 

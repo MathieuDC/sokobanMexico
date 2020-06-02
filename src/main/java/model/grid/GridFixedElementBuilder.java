@@ -1,6 +1,6 @@
-package grid;
+package model.grid;
 
-import element.FixedElement;
+import model.element.FixedElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class GridFixedElementBuilder implements GridBuilder {
      * Adds the given fixedElement in the List fixedElement.
      * Increments indexCurrentCow.
      *
-     * @param fixedElement The element to add.
+     * @param fixedElement The model.element to add.
      */
     public void add(FixedElement fixedElement){
         fixedElements.get(indexCurrentRow).add(indexCurrentCol++, fixedElement);

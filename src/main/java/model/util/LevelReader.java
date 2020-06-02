@@ -1,15 +1,16 @@
-package util;
+package model.util;
 
-import element.FixedElement;
-import element.MovableElement;
-import grid.*;
-import level.Field;
-import level.Level;
+import model.element.FixedElement;
+import model.element.MovableElement;
+import model.grid.*;
+import model.level.Field;
+import model.level.Level;
+import model.levelHandler.LevelHandler;
 
 import java.io.*;
 import java.util.Scanner;
 
-public class LevelReader {
+public class LevelReader{
 
     private FileReader fileReader;
 
@@ -83,5 +84,29 @@ public class LevelReader {
         int y = scanner.nextInt();
         scanner.close();
         return new Coordinate(x,y);
+    }
+
+    /**
+     * Load an ongoing level. If the aren't any, load the first level.
+     *
+     * @return the ongoing level if existing, otherwise the first level.
+     */
+    public LevelHandler load(){
+        ObjectInputStream objectInputStream;
+        try {
+            objectInputStream = new ObjectInputStream(new FileInputStream("levels/current.ser"));
+        } catch (IOException e) {
+            return new LevelHandler();
+        }
+
+        try {
+            LevelHandler levelHandler = (LevelHandler) objectInputStream.readObject();
+            objectInputStream.close();
+            return levelHandler;
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }

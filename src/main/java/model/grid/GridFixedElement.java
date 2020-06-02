@@ -1,11 +1,12 @@
-package grid;
+package model.grid;
 
-import element.FixedElement;
-import util.Coordinate;
+import model.element.FixedElement;
+import model.util.Coordinate;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class GridFixedElement implements Grid{
+public class GridFixedElement implements Grid, Serializable {
 
     List<List<FixedElement>> elements;
 
@@ -17,7 +18,7 @@ public class GridFixedElement implements Grid{
      *
      * @param x
      * @param y
-     * @return the element with coord (x,y) or null.
+     * @return the model.element with coord (x,y) or null.
      */
     @Override
     public FixedElement get(int x, int y){

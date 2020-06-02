@@ -1,17 +1,19 @@
-package level;
+package model.level;
 
-import element.Element;
-import element.FixedElement;
-import element.MovableElement;
-import grid.GridFixedElement;
-import grid.GridMovableElement;
-import util.Coordinate;
-import util.Direction;
+import model.element.Element;
+import model.element.FixedElement;
+import model.element.MovableElement;
+import model.grid.GridFixedElement;
+import model.grid.GridMovableElement;
+import model.util.Coordinate;
+import model.util.Direction;
+
+import java.io.Serializable;
 
 /**
  * Represents a field
  */
-public class Field {
+public class Field implements Serializable {
 
     private Coordinate characterCoord;
 
@@ -26,11 +28,11 @@ public class Field {
     }
 
     /**
-     * Returns the element with coordinates (x,y), or null.
+     * Returns the model.element with coordinates (x,y), or null.
      *
-     * @param x abscissa of the element
-     * @param y ordinate of the element
-     * @return the element with coordinates (x,y), or null.
+     * @param x abscissa of the model.element
+     * @param y ordinate of the model.element
+     * @return the model.element with coordinates (x,y), or null.
      */
     public Element get(int x, int y){
         if(characterCoord != null && characterCoord.equals(x,y)){
@@ -76,12 +78,12 @@ public class Field {
         if(nextElement == MovableElement.BOX || nextElement == MovableElement.PLACED_BOX){
             if(fixedElements.get(getNextCoord(nextElementCoord, direction)) == FixedElement.WALL || movableElements.get(getNextCoord(nextElementCoord, direction)) != null) return;
             if(fixedElements.get(getNextCoord(nextElementCoord, direction)) == FixedElement.FLOOR) {
-             movableElements.unplace(nextElementCoord);
-             movableElements.move(nextElementCoord, direction);
-             characterCoord.move(direction);
-             return;
+                movableElements.unplace(nextElementCoord);
+                movableElements.move(nextElementCoord, direction);
+                characterCoord.move(direction);
+                return;
             }
-            if(fixedElements.get(nextElementCoord) == FixedElement.GOAL) {
+            if(fixedElements.get(getNextCoord(nextElementCoord, direction)) == FixedElement.GOAL) {
                 movableElements.place(nextElementCoord);
                 movableElements.move(nextElementCoord, direction);
                 characterCoord.move(direction);
@@ -107,6 +109,22 @@ public class Field {
         move(Direction.DOWN);
     }
 
+    public int getNumGoals() {
+        return fixedElements.getNumGoals();
+    }
+
+    public int getNumPlacedBoxes() {
+        return movableElements.getNumPlacedBoxes();
+    }
+
+    public int height() {
+        return fixedElements.height();
+    }
+
+    public int length() {
+        return fixedElements.length();
+    }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
@@ -117,13 +135,5 @@ public class Field {
             res.append('\n');
         }
         return res.toString();
-    }
-
-    public int getNumGoals() {
-        return fixedElements.getNumGoals();
-    }
-
-    public int getNumPlacedBoxes() {
-        return movableElements.getNumPlacedBoxes();
     }
 }
