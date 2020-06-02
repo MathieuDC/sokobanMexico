@@ -11,6 +11,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+/**
+ * This class is use to wrap a LevelPanel and a LevelMenuPanel.
+ */
 public class LevelWrapperPanel extends JPanel {
 
     private LevelPanel levelPanel;
@@ -27,6 +30,7 @@ public class LevelWrapperPanel extends JPanel {
         initKeyEvent(levelHandler, sokobanFrame);
 
         nextLevelLabel = new JLabel("You won ! Press any key to continue.");
+
     }
 
     private void initKeyEvent(LevelHandler levelHandler, SokobanFrame sokobanFrame) {

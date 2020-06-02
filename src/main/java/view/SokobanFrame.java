@@ -35,7 +35,7 @@ public class SokobanFrame extends JFrame {
         initMenuPanel();
         add(mainMenuPanel);
 
-        this.setSize(500, 500);
+        this.setSize(500, 400);
         this.setVisible(true);
 
         initNextLevelKeyListener();
