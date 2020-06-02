@@ -3,6 +3,7 @@ package view;
 import model.levelHandler.LevelHandler;
 import model.util.LevelReader;
 import model.util.LevelWriter;
+import view.level.LevelWrapperPanel;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;

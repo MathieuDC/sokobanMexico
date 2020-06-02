@@ -1,10 +1,11 @@
-package view;
+package view.level;
 
 import model.levelHandler.LevelHandler;
-import view.levelAction.LevelDownAction;
-import view.levelAction.LevelLeftAction;
-import view.levelAction.LevelRightAction;
-import view.levelAction.LevelUpAction;
+import view.SokobanFrame;
+import view.level.levelAction.LevelDownAction;
+import view.level.levelAction.LevelLeftAction;
+import view.level.levelAction.LevelRightAction;
+import view.level.levelAction.LevelUpAction;
 
 import javax.swing.*;
 import java.awt.*;

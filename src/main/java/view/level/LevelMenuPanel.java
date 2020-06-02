@@ -1,4 +1,6 @@
-package view;
+package view.level;
+
+import view.SokobanFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

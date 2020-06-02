@@ -1,7 +1,8 @@
-package view;
+package view.level;
 
 import model.level.Level;
 import model.levelHandler.LevelHandler;
+import view.SokobanFrame;
 
 import javax.swing.*;
 import java.awt.*;
