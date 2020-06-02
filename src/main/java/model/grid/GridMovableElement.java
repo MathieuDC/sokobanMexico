@@ -7,6 +7,10 @@ import model.util.Direction;
 import java.io.Serializable;
 import java.util.*;
 
+/**
+ * This class represents a Grid of MovableElement and implements Grid interface.
+ * Uses HashMap to associate Coordinate to MovableElement.
+ */
 public class GridMovableElement implements Grid, Serializable {
 
     private HashMap<Coordinate, MovableElement> elements;
@@ -15,12 +19,20 @@ public class GridMovableElement implements Grid, Serializable {
         this.elements = elements;
     }
 
+    /**
+     * Marks the BOX with coordinate coord as PLACED_BOX.
+     * Does nothing if the BOX doesn't exist.
+     */
     public void place(Coordinate coord) {
         if(!elements.containsKey(coord)) return; //TODO Handle error
 
         elements.put(coord, MovableElement.PLACED_BOX);
     }
 
+    /**
+     * Marks the PLACED_BOX with coordinate coord as BOX.
+     * Does nothing if the PLACED_BOX doesn't exist.
+     */
     public void unplace(Coordinate coord) {
         if(!elements.containsKey(coord)) return; //TODO Handle error
 
@@ -96,6 +108,9 @@ public class GridMovableElement implements Grid, Serializable {
         return elements.get(coord);
     }
 
+    /**
+     * @return number of placed boxes.
+     */
     public int getNumPlacedBoxes() {
         return (int) elements.values().stream().filter(element -> element == MovableElement.PLACED_BOX).count();
     }

@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 public class LevelHandler implements Serializable {
 
+    private static final Long serialVersionUID = 1L;
+
     public final static int MAX_INDEX_LEVEL = 3;
 
     private Level currentLevel;
@@ -24,17 +26,6 @@ public class LevelHandler implements Serializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * This constructor is used when the player load an existing game.
-     *
-     * @param currentLevel The level that has been load.
-     * @param indexCurrentLevel Index of the level.
-     */
-    public LevelHandler(Level currentLevel, int indexCurrentLevel) {
-        this.currentLevel = currentLevel;
-        this.indexCurrentLevel = indexCurrentLevel;
     }
 
     public void nextLevel()  {

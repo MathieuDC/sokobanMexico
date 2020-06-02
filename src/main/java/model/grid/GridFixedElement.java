@@ -1,3 +1,4 @@
+// GridFixedElement.java       Author: De Campou Mathieu
 package model.grid;
 
 import model.element.FixedElement;
@@ -6,6 +7,10 @@ import model.util.Coordinate;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * This class represents a Grid of FixedElement and implements Grid interface.
+ * Uses a 2D ArrayList to stock FixedElement.
+ */
 public class GridFixedElement implements Grid, Serializable {
 
     List<List<FixedElement>> elements;
@@ -38,6 +43,7 @@ public class GridFixedElement implements Grid, Serializable {
      */
     public int getNumGoals() {
         int res = 0;
+        //For each line, a filter is applied to keep only GOAL, then the count is add to res.
         for(List<FixedElement> row : elements){
             res += row.stream().filter(element -> element == FixedElement.GOAL).count();
         }

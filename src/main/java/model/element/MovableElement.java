@@ -1,5 +1,9 @@
+//  FixedElement.java       Author: De Campou Mathieu
 package model.element;
 
+/**
+ * This enum declares all the MovableElement and implements the Element interface.
+ */
 public enum MovableElement implements Element {
     BOX("B"),
     PLACED_BOX("P"),

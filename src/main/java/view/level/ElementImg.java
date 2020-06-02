@@ -20,7 +20,6 @@ public class ElementImg{
         try {
             this.image = ImageIO.read(new File(path));
         } catch (IOException e) {
-            System.out.println(path);
             e.printStackTrace();
         }
         this.y = i * 34;

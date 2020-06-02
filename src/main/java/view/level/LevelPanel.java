@@ -17,6 +17,7 @@ public class LevelPanel extends JPanel {
         this.level = levelHandler.getCurrentLevel();
     }
 
+    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         for (ElementImg elementImg : getElementImgs()) {

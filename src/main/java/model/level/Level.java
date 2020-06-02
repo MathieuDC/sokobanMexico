@@ -1,9 +1,13 @@
+//  Level.java       Author: Puy Guillaume
 package model.level;
 
 import model.element.Element;
 
 import java.io.Serializable;
 
+/**
+ * Represents a Level of the game.
+ */
 public class Level implements Serializable {
 
     private Field field;

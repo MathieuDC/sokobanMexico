@@ -1,8 +1,12 @@
+//  Coordinate.java       Author: Baudorre Grégoire
 package model.util;
 
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * This class represents a coordinate of an Element in a Grid.
+ */
 public class Coordinate implements Serializable {
 
     private int x;

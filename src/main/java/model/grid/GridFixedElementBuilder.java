@@ -1,3 +1,5 @@
+//  GridFixedElementBuilder.java       Author: De Campou Mathieu
+
 package model.grid;
 
 import model.element.FixedElement;
@@ -5,6 +7,9 @@ import model.element.FixedElement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is used to build a GridFixedElement.
+ */
 public class GridFixedElementBuilder implements GridBuilder {
 
     private List<List<FixedElement>> fixedElements;
@@ -20,9 +25,9 @@ public class GridFixedElementBuilder implements GridBuilder {
 
     /**
      * Adds the given fixedElement in the List fixedElement.
-     * Increments indexCurrentCow.
+     * Increments indexCurrentCol.
      *
-     * @param fixedElement The model.element to add.
+     * @param fixedElement The element to add.
      */
     public void add(FixedElement fixedElement){
         fixedElements.get(indexCurrentRow).add(indexCurrentCol++, fixedElement);

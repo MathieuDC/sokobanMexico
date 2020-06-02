@@ -1,3 +1,4 @@
+//  Field.java       Author: Puy Guillaume
 package model.level;
 
 import model.element.Element;
@@ -11,7 +12,9 @@ import model.util.Direction;
 import java.io.Serializable;
 
 /**
- * Represents a field
+ * This class represents a field with all the elements.
+ * It handles the grid of FixedElement, the grid of MovableElement and the character coordinate.
+ * It acts like an interface for the Level.
  */
 public class Field implements Serializable {
 
@@ -28,7 +31,7 @@ public class Field implements Serializable {
     }
 
     /**
-     * Returns the model.element with coordinates (x,y), or null.
+     * Returns the element with coordinates (x,y), or null.
      *
      * @param x abscissa of the model.element
      * @param y ordinate of the model.element
@@ -41,6 +44,9 @@ public class Field implements Serializable {
         return movableElements.get(x, y) == null ? fixedElements.get(x, y) : movableElements.get(x, y);
     }
 
+    /**
+     * @return the coordinate of the next element on the grid in function of the given direction and coordinate.
+     */
     private Coordinate getNextCoord(Coordinate coord, Direction direction) {
         Coordinate res = new Coordinate(coord.getX(),coord.getY());
         switch (direction){

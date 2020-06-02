@@ -1,3 +1,5 @@
+//  GridMovableElementBuilder.java       Author: De Campou Mathieu
+
 package model.grid;
 
 import model.element.MovableElement;
@@ -5,6 +7,9 @@ import model.util.Coordinate;
 
 import java.util.HashMap;
 
+/**
+ * This class is used to build a GridMovableElement.
+ */
 public class GridMovableElementBuilder implements GridBuilder {
 
     public HashMap<Coordinate, MovableElement> movableElements;

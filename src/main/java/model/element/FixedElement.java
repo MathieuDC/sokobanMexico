@@ -1,5 +1,9 @@
+//  FixedElement.java       Author: De Campou Mathieu
 package model.element;
 
+/**
+ * This enum declares all the FixedElement and implements the Element interface.
+ */
 public enum FixedElement implements Element {
     WALL("W"),
     FLOOR("F"),
