@@ -1,3 +1,8 @@
+//  LevelRightAction.java
+//  Author: Guillaume Puy
+//  Date : 30/05/2020
+
+
 package view.level.levelAction;
 
 import model.level.Level;

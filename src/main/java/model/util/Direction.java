@@ -1,3 +1,7 @@
+//  Direction.java
+//  Author: Baudorre Grégoire
+//  Date : 22/05/2020
+
 package model.util;
 
 /**

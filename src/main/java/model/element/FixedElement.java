@@ -1,4 +1,6 @@
-//  FixedElement.java       Author: De Campou Mathieu
+//  FixedElement.java
+//  Author: Mathieu De Campou
+//  Date : 21/05/2020
 package model.element;
 
 /**

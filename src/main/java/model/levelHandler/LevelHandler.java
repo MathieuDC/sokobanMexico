@@ -1,3 +1,6 @@
+//  Author : Puy Guillaume
+//  Date : 22/05/2020
+
 package model.levelHandler;
 
 import model.level.Level;

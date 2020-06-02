@@ -1,3 +1,7 @@
+//  SokabanFrame.java
+//  Author: Ouarezki Nabil
+//  Date : 01/06/2020
+
 package view;
 
 import model.levelHandler.LevelHandler;

@@ -1,4 +1,6 @@
-//  GridFixedElementBuilder.java       Author: De Campou Mathieu
+//  GridFixedElementBuilder.java
+//  Author: De Campou Mathieu
+// Date : 19/05/2020
 
 package model.grid;
 

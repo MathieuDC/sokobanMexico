@@ -1,4 +1,6 @@
-//  Field.java       Author: Puy Guillaume
+//  Field.java
+//  Author: Puy Guillaume
+//  Date : 22/05/2020
 package model.level;
 
 import model.element.Element;

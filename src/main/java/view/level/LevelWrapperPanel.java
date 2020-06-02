@@ -1,3 +1,6 @@
+//  Author : De Campou Mathieu
+//  Date : 01/06/2020
+
 package view.level;
 
 import model.levelHandler.LevelHandler;
